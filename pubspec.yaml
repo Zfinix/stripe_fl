@@ -1,0 +1,24 @@
+name: stripe_fl
+description: RavePay by Flutterwave Dart SDK. http://rave.flutterwave.com
+version: 0.0.1+2
+author: Ogbonda Chiziaruhoma <chiziaruhoma@gmail.com>
+homepage: https://github.com/zfinix/stripe_fl
+
+environment:
+  sdk: ">=2.6.0-dev <3.0.0"
+
+dependencies:
+  dio: 3.0.7
+  http: ^0.12.0+2
+  built_value: ^6.8.2
+  built_collection: ^4.2.2
+  convert: ^2.1.1
+
+dev_dependencies:
+  test: ^1.9.0
+  pedantic: ^1.8.0
+  test_coverage:
+    git:
+      url: https://github.com/jogboms/test-coverage.git
+  build_runner: ^1.7.2
+  built_value_generator: ^6.8.2
