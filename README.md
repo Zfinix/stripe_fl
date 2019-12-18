@@ -1,6 +1,9 @@
 # stripe_fl
 
-A new Flutter package project.
+[![Build Status](https://travis-ci.com/Zfinix/stripe_fl.svg?branch=master)](https://travis-ci.com/Zfinix/stripe_fl)
+
+
+Dart Package for Stripe API.
 
 ## Getting Started
 
