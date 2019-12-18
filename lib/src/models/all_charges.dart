@@ -13,7 +13,7 @@ part 'all_charges.g.dart';
 
 abstract class AllCharges implements Built<AllCharges, AllChargesBuilder> {
   AllCharges._();
- 
+
   factory AllCharges([updates(AllChargesBuilder b)]) = _$AllCharges;
 
   @nullable

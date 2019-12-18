@@ -9,11 +9,6 @@ import 'log.dart';
 class HttpWrapper {
   HttpWrapper({@required this.baseUrl});
 
-  static final Map<String, String> _headers = {
-    'Accept': 'application/json',
-    'Content-Type': 'application/json'
-  };
-
   final String baseUrl;
 
   Future<http.Response> get(String url) async {

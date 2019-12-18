@@ -2,7 +2,6 @@ import 'package:stripe_fl/src/utils/http_wrapper.dart';
 
 import '../stripe_fl.dart';
 
-
 class Api {
   Api()
       : http = HttpWrapper(baseUrl: Stripe().baseUrl),

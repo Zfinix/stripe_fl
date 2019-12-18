@@ -2,7 +2,6 @@ library charge_response;
 
 import 'dart:convert';
 
-import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -249,9 +248,9 @@ abstract class PaymentMethodDetails
   factory PaymentMethodDetails([updates(PaymentMethodDetailsBuilder b)]) =
       _$PaymentMethodDetails;
 
-   @nullable
+  @nullable
   @BuiltValueField(wireName: 'card')
-  CreditCard get creditCard; 
+  CreditCard get creditCard;
 
   @nullable
   @BuiltValueField(wireName: 'type')

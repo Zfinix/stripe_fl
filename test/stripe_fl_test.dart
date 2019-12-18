@@ -54,12 +54,14 @@ void main() {
     group('-> BaseUrl', () {
       test('-> production', () {
         Stripe.reset();
-        Stripe.init(production: true, publicKey: PUBK_TEST, secretKey: SECK_TEST);
+        Stripe.init(
+            production: true, publicKey: PUBK_TEST, secretKey: SECK_TEST);
         expect(Stripe().baseUrl, Url.Prod);
       });
       test('-> staging', () {
         Stripe.reset();
-        Stripe.init(production: false, publicKey: PUBK_TEST, secretKey: SECK_TEST);
+        Stripe.init(
+            production: false, publicKey: PUBK_TEST, secretKey: SECK_TEST);
         expect(Stripe().baseUrl, Url.Staging);
       });
     });
@@ -73,8 +75,10 @@ void main() {
       test('-> Multiple init', () {
         expect(
           () {
-            Stripe.init(production: true, publicKey: PUBK_TEST, secretKey: SECK_TEST);
-            Stripe.init(production: true, publicKey: PUBK_TEST, secretKey: SECK_TEST);
+            Stripe.init(
+                production: true, publicKey: PUBK_TEST, secretKey: SECK_TEST);
+            Stripe.init(
+                production: true, publicKey: PUBK_TEST, secretKey: SECK_TEST);
           },
           throwsAssertionError,
         );
@@ -82,19 +86,22 @@ void main() {
 
       test('-> production = null', () {
         expect(
-          () => Stripe.init(production: null, publicKey: PUBK_TEST, secretKey: SECK_TEST),
+          () => Stripe.init(
+              production: null, publicKey: PUBK_TEST, secretKey: SECK_TEST),
           throwsAssertionError,
         );
       });
       test('-> publicKey = null', () {
         expect(
-          () => Stripe.init(production: true, publicKey: null, secretKey: SECK_TEST),
+          () => Stripe.init(
+              production: true, publicKey: null, secretKey: SECK_TEST),
           throwsAssertionError,
         );
       });
       test('-> secretKey = null', () {
         expect(
-          () => Stripe.init(production: true, publicKey: PUBK_TEST, secretKey: null),
+          () => Stripe.init(
+              production: true, publicKey: PUBK_TEST, secretKey: null),
           throwsAssertionError,
         );
       });

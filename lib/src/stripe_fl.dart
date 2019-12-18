@@ -10,7 +10,10 @@ class Stripe {
     return _instance;
   }
 
-  Stripe._({@required this.publicKey, @required this.secretKey, @required this.production})
+  Stripe._(
+      {@required this.publicKey,
+      @required this.secretKey,
+      @required this.production})
       : baseUrl = production ? Url.Prod : Url.Staging;
 
   @visibleForTesting
@@ -30,7 +33,8 @@ class Stripe {
     assert(production != null);
     assert((_instance != null && restart == true) || _instance == null,
         'Are you trying to reset the previous keys by calling Stripe.init() again?.');
-    _instance = Stripe._(publicKey: publicKey, secretKey: secretKey, production: production);
+    _instance = Stripe._(
+        publicKey: publicKey, secretKey: secretKey, production: production);
     // Initialize logger
     Log.init(!useLogger);
   }

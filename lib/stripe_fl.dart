@@ -1,6 +1,5 @@
 library stripe_fl;
 
-
 export './src/api/charge.dart';
 export './src/api/tokenize.dart';
 export './src/constants/auth.dart';

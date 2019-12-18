@@ -15,7 +15,7 @@ class Response<T> {
   factory Response(http.Response _response,
       {TransformFunction<T> onTransform, bool shouldThrow = true}) {
     final _status = _Status(_response?.statusCode);
-   
+
     try {
       final dynamic response = json.encode(_response?.data);
 
@@ -37,7 +37,8 @@ class Response<T> {
               : Strings.errorMessage;
 
       if (_status.isNotOk) {
-        throw ResponseException(_status.code, status, json.encode(_response.data));
+        throw ResponseException(
+            _status.code, status, json.encode(_response.data));
       }
 
       final dynamic rawData = response is Map && response.containsKey('data')
@@ -49,7 +50,7 @@ class Response<T> {
         message: message,
         data: onTransform != null ? onTransform(rawData, status) : null,
       );
-    }  catch (e) {
+    } catch (e) {
       Log().error('Response.catch', e);
       final message =
           _status.code == HttpStatus.badGateway && Stripe().production
