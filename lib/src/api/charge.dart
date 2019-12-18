@@ -12,35 +12,34 @@ import 'api.dart';
 class Charge extends Api {
   /// To charge a credit card or other payment source, you create a Charge object. If your API key is in test mode, the supplied payment source (e.g., card) won’t actually be charged, although everything else will occur as if in live mode. (Stripe assumes that the charge would have completed successfully).
 
-/// Arguments
-/// [amount]
-/// REQUIRED
-/// Amount intended to be collected by this PaymentIntent. A positive integer representing how much to charge in the smallest currency unit (e.g., 100 cents to charge $1.00 or 100 to charge ¥100, a zero-decimal currency). The minimum amount is $0.50 US or equivalent in charge currency. The amount value supports up to eight digits (e.g., a value of 99999999 for a USD charge of $999,999.99).
+  /// Arguments
+  /// [amount]
+  /// REQUIRED
+  /// Amount intended to be collected by this PaymentIntent. A positive integer representing how much to charge in the smallest currency unit (e.g., 100 cents to charge $1.00 or 100 to charge ¥100, a zero-decimal currency). The minimum amount is $0.50 US or equivalent in charge currency. The amount value supports up to eight digits (e.g., a value of 99999999 for a USD charge of $999,999.99).
 
-/// [currency]
-/// REQUIRED
-/// Three-letter ISO [currency] code, in lowercase. Must be a supported [currency].
+  /// [currency]
+  /// REQUIRED
+  /// Three-letter ISO [currency] code, in lowercase. Must be a supported [currency].
 
-/// [application_fee_amount]
-/// optional
-/// A fee in pence that will be applied to the charge and transferred to the application owner’s Stripe account. The request must be made with an OAuth key or the Stripe-Account header in order to take an application fee. For more information, see the application fees documentation.
+  /// [application_fee_amount]
+  /// optional
+  /// A fee in pence that will be applied to the charge and transferred to the application owner’s Stripe account. The request must be made with an OAuth key or the Stripe-Account header in order to take an application fee. For more information, see the application fees documentation.
 
-/// [capture]
-/// optional
-/// Whether to immediately capture the charge. Defaults to true. When false, the charge issues an authorization (or pre-authorization), and will need to be captured later. Uncaptured charges expire in seven days. For more information, see the authorizing charges and settling later documentation.
+  /// [capture]
+  /// optional
+  /// Whether to immediately capture the charge. Defaults to true. When false, the charge issues an authorization (or pre-authorization), and will need to be captured later. Uncaptured charges expire in seven days. For more information, see the authorizing charges and settling later documentation.
 
-/// [description]
-/// optional
-/// An arbitrary string which you can attach to a Charge object. It is displayed when in the web interface alongside the charge. Note that if you use Stripe to send automatic email receipts to your customers, your receipt emails will include the description of the charge(s) that they are describing.
+  /// [description]
+  /// optional
+  /// An arbitrary string which you can attach to a Charge object. It is displayed when in the web interface alongside the charge. Note that if you use Stripe to send automatic email receipts to your customers, your receipt emails will include the description of the charge(s) that they are describing.
 
-/// [metadata]
-/// optional hash
-/// Set of key-value pairs that you can attach to an object. This can be useful for storing additional information about the object in a structured format.
+  /// [metadata]
+  /// optional hash
+  /// Set of key-value pairs that you can attach to an object. This can be useful for storing additional information about the object in a structured format.
 
-/// [receipt_email]
-/// optional
-/// The email address to which this charge’s receipt will be sent. The receipt will not be sent until the charge is paid, and no receipts will be sent for test mode charges. If this charge is for a Customer, the email address specified here will override the customer’s email address. If receipt_email is specified for a charge in live mode, a receipt will be sent regardless of your email settings.
-
+  /// [receipt_email]
+  /// optional
+  /// The email address to which this charge’s receipt will be sent. The receipt will not be sent until the charge is paid, and no receipts will be sent for test mode charges. If this charge is for a Customer, the email address specified here will override the customer’s email address. If receipt_email is specified for a charge in live mode, a receipt will be sent regardless of your email settings.
 
   Future<Response<ChargeResponse>> card({
     @required int amount,

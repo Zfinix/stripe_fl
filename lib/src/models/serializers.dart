@@ -12,7 +12,7 @@ import 'charge_response.dart';
 
 part 'serializers.g.dart';
 
-@SerializersFor(const [
+@SerializersFor([
   CardToken,
   Card,
   AccountToken,

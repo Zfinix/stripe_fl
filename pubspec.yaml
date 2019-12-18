@@ -1,6 +1,6 @@
 name: stripe_fl
-description: Stripe Dart SDK. http://stripe.com
-version: 0.0.1+5
+description: Stripe Payment Dart SDK, Easily check the api and its documentation https://stripe.com/docs/api/
+version: 0.1.0
 homepage: https://github.com/zfinix/stripe_fl
 
 environment:
@@ -9,8 +9,8 @@ environment:
 dependencies:
   dio: ^3.0.7
   http: ^0.12.0+2
-  built_value: ^6.8.2
-  built_collection: ^4.2.2
+  built_value: ^7.0.0
+  built_collection: ^4.3.0
   convert: ^2.1.1
   meta: ^1.1.8
 
@@ -21,4 +21,4 @@ dev_dependencies:
     git:
       url: https://github.com/jogboms/test-coverage.git
   build_runner: ^1.7.2
-  built_value_generator: ^6.8.2
+  built_value_generator: ^7.0.0
