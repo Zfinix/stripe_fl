@@ -1,6 +1,6 @@
 name: stripe_fl
 description: Stripe Dart SDK. http://stripe.com
-version: 0.0.1+3
+version: 0.0.1+4
 homepage: https://github.com/zfinix/stripe_fl
 
 environment:
